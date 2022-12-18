@@ -6,9 +6,19 @@
     xmlns:local="clr-namespace:Danea_Gabriel_Lab7"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+ Title="Welcome"
+ ContentTemplate="{DataTemplate local:MainPage}"
+ />
+        <ShellContent
+ Title="About"
+ ContentTemplate="{DataTemplate local:AboutPage}"
+ />
+        <ShellContent
+ Title="My Shopping Lists"
+ ContentTemplate="{DataTemplate local:ListEntryPage}"
+ />
+    </TabBar>
 
 </Shell>

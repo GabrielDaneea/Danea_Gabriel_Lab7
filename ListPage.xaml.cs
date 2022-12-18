@@ -1,15 +1,12 @@
-﻿using Danea_Gabriel_Lab7.Models;
+using Danea_Gabriel_Lab7.Models;
 namespace Danea_Gabriel_Lab7;
 
-public partial class MainPage : ContentPage
+public partial class ListPage : ContentPage
 {
-
-
-	public MainPage()
+	public ListPage()
 	{
 		InitializeComponent();
 	}
-
     async void OnSaveButtonClicked(object sender, EventArgs e)
     {
         var slist = (ShopList)BindingContext;
@@ -23,6 +20,4 @@ public partial class MainPage : ContentPage
         await App.Database.DeleteShopListAsync(slist);
         await Navigation.PopAsync();
     }
-
 }
-
